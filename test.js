@@ -40,6 +40,9 @@ describe('index', function() {
     it('should price a full 5 set', function() {
       price([0, 1, 2, 3, 4]).should.be.eql(8 * 5 * 0.75);
     });
+    it('should price a full 5 set', function() {
+      price([0, 1, 2, 3, 4, 5]).should.be.eql(8 * 5 * 0.75);
+    });
 
  
   });
