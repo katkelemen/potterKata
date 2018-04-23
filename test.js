@@ -34,8 +34,12 @@ describe('index', function() {
     it('should price two sets of 2', function() {
       price([0, 0, 1, 1]).should.be.eql(2 * (8 * 2 * 0.95));
     });
-
-
+    it('should price a set of 4, a set of 3, a set of 2 and a set of 1', function() {
+      price([1, 2, 3, 4, 2, 3, 4, 3, 4, 4]).should.be.eql(8 + (8 * 4 * 0.80) + (8 * 3 * 0.90) + (8 * 2 * 0.95));
+    });
+    it('should price a full 5 set', function() {
+      price([0, 1, 2, 3, 4]).should.be.eql(8 * 5 * 0.75);
+    });
 
  
   });
